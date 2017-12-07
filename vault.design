@@ -1,0 +1,29 @@
+crypto:
+    encrypt(string, key, id)
+    decrypt(string, key, id)
+
+vault:
+    set_password_file_location(path)
+        # stores the encrypted passwords in a file specified by path
+    add_password(service, password)
+        # requires master password.
+    show_password(service)
+        # requires master password
+    show_all_passwords()
+
+
+CLI:
+    vault --add SERVICE
+        You have chosen to add a new password for SERVICE to the vault.
+        Master password:
+        Password for SERVICE: 
+        Password for $service successfully added to the vault.
+
+    vault --show SERVICE
+        Master password:
+        SERVICE --> pass
+    
+    vault --show-all
+        Master password:
+        SERVICE1 --> pass1
+        SERVICE2 --> pass2
