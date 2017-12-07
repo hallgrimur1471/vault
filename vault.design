@@ -13,6 +13,14 @@ vault:
 
 
 CLI:
+    vault --set-file-location FILEPATH
+        # writes FILEPATH to .conf
+        Success. Encrypted passwords will be stored at FILEPATH
+
+    vault --show-file-location
+        # looks up FILEPATH from .conf
+        FILEPATH
+
     vault --add SERVICE
         You have chosen to add a new password for SERVICE to the vault.
         Master password:
