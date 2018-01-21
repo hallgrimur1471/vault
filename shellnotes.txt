@@ -1,0 +1,25 @@
+latexmk -pdf -pvc filename.tex  #[compile .tex file on file save]
+
+find | xargs wc -l  #[count all lines in a directory (current folder)]
+find . -name '*.js' | xargs wc -l  #[count all lines in a directory (current folder and recursive)]
+
+curl ipinfo.io/ip  #[find public ip of this computer]
+
+apt-cache search ros-kinetic  #[search in apt repository]
+
+ps aux  #[list all running processes]
+
+cat file.txt | pbcopy  #[copy file contents]
+pbcopy < file.txt  #[copy file contents]
+pbpaste  #[paste file contents]
+
+nmap -sn 192.168.1.0/24  #[Find all IP adresses in subnet range]
+
+nmcli dev wifi connect <NETWORK_SSID> password <NETWORK_PASSWORD>  #[connect to network]
+nmcli -f NAME,UUID,AUTOCONNECT,AUTOCONNECT-PRIORITY c  #[print network connection priority]
+sudo nmcli connection modify <NETWORK_NAME> connection.autoconnect-priority 20  #[set network connection priority]
+ssh -R 19999:localhost:22 hallgrimur1471@31.209.255.99  #[setup for reverse ssh tunnel]
+rsync -avz -e ssh -p 19999 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null --progress /usr/local/bin/findipbymac hallgrimur1471@localhost:~/rsync/findipbymac  #[rsync through reverse ssh tunnel]
+gpg --symmetric < dir.tar.gz > dir.tar.gz.gpg && rm dir.tar.gz  #[encrypt file]
+gpg --decrypt < dir.tar.gz.gpg > dir.tar.gz && rm dir.tar.gz.gpg  #[decrypt file]
+xxd passcode.input1  [view file as hex]
