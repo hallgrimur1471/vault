@@ -32,7 +32,7 @@ def main():
     run(handler_class=VaultRequestHandler)
 
 def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
-    server_address = ('', 8000)
+    server_address = ('', 1471)
     httpd = server_class(server_address, handler_class)
     httpd.serve_forever()
 
